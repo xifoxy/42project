@@ -1,0 +1,38 @@
+memset
+printf
+malloc
+free
+write
+usleep
+
+gettimeofday
+
+pthread_create			// 스레드 생성
+pthread_detach			// 스레드 분리
+pthread_join			// 음... 반환..?
+pthread_mutex_init		// 넣기
+pthread_mutex_lock		// 잠구기
+pthread_mutex_unlock	// 열기
+pthread_mutex_destroy	//
+
+
+mandatory
+1. check the code of philo for the following things and ask for an explanation.
+    - 필로 코드에서 다음 사항을 확인하고 설명을 부탁한다.
+2. check if there is one thread per philosopher.
+    - 철학자당 하나의 스레드가 있는지 확인한다
+3. check there's only one fork per philosopher.
+    - 철학자당 포크가 하나만 있는지 확인합니다.
+4. check if there is a mutex per fork and that it's used to check the fork value and/or change it.
+    - 포크당 뮤텍스가 있는지 확인하고 포크 값을 확인하거나 변경하는 데 사용되는지 확인한다.
+5. check the output should never produce a scrambled view.
+    - 출력이 스크램블된 보기를 생성하지 않는지 확인한다.
+6. check how the death of a philosopher is checked and if there is a mutex to protect that a philosopher dies and (start eating) at the same time.
+    - 철학자의 죽음을 확인하는 방법과 철학자가 죽는 것과 동시에 (먹기 시작) 보호하는 뮤텍스가 있는지 확인합니다.
+
+bonus
+1. check the code of philo_bonus for the following things and ask for an explanation.
+2. check if there will be one process per philosopher and that the first process waits for all of them.
+3. check if there is a single semaphore that represents the number of forks.
+4. check if the output is protected against multiple access. to avoid a scrambled view.
+5. check how the death of a philosopher is checked and if there is a semaphore to protect that a philosopher dies and starts eating at the same time
